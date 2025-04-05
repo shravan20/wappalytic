@@ -11,7 +11,7 @@ from chat_features import (
     chat_awards,
 )
 
-st.set_page_config(page_title="WhatsApp Chat Analyzer", layout="wide")
+st.set_page_config(page_title="wappalytic", layout="wide")
 st.title("📱 wappalytic (Offline)")
 
 uploaded_file = st.file_uploader("Upload your WhatsApp chat .txt file", type=["txt"])
