@@ -12,7 +12,17 @@ from chat_features import (
 )
 
 st.set_page_config(page_title="wappalytic", layout="wide")
-st.title("📱 wappalytic (Offline)")
+st.title("📱 Wappalytic (Offline)")
+
+with st.expander("📝 How to export your WhatsApp chat (.txt)"):
+    st.markdown(
+        """
+        - On **Android**: Open the chat → Tap ⋮ → More → *Export Chat* → Choose **Without Media**.
+        - On **iPhone**: Open the chat → Tap chat name → *Export Chat* → Choose **Without Media**.
+        - Save or send the file to yourself (email, Google Drive, etc).
+        - Then upload it below 👇
+        """
+    )
 
 uploaded_file = st.file_uploader("Upload your WhatsApp chat .txt file", type=["txt"])
 
