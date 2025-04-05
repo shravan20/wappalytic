@@ -14,6 +14,40 @@ from chat_features import (
 st.set_page_config(page_title="wappalytic", layout="wide")
 st.title("📱 Wappalytic (Offline)")
 
+# Theme settings
+theme = st.radio("🌗 Choose Theme", ["🌞 Light", "🌚 Dark"], horizontal=True)
+
+
+def apply_theme(selected_theme):
+    if selected_theme == "🌚 Dark":
+        st.markdown(
+            """
+            <style>
+                .stApp {
+                    background-color: #1e1e1e;
+                    color: #f0f0f0;
+                }
+                .css-18e3th9, .css-1d391kg {
+                    background-color: #2a2a2a !important;
+                    color: #f0f0f0;
+                }
+                .css-1v3fvcr {
+                    background-color: #333333 !important;
+                    color: #ffffff !important;
+                }
+                .e1fqkh3o3, .stMarkdown, .stDataFrame {
+                    color: #e0e0e0 !important;
+                }
+            </style>
+            """,
+            unsafe_allow_html=True,
+        )
+    # Optionally, add more custom styling for light mode if needed
+
+
+apply_theme(theme)
+
+
 with st.expander("📝 How to export your WhatsApp chat (.txt)"):
     st.markdown(
         """
